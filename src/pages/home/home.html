@@ -1,0 +1,55 @@
+<ion-content>
+
+  <ion-slides pager (ionSlideDidChange)="slideChange()" (ionSlideDrag)="slideMoved()">
+    <ion-slide>
+      <div class="diag" style="background: url('assets/img/whitedg.svg') no-repeat">
+        <ion-icon ios="ios-analytics" md="md-analytics" color="primary_c" [@bounce]='state' (@bounce.done)="animationDone()"></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>Opinando ando</h2>
+        <p> tu opinion es importante</p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="diag" style="background: url('assets/img/whitedg.svg') no-repeat">
+        <ion-icon ios="ios-chatbubbles" md="md-chatbubbles" color="primary_c" [@bounce]='state'></ion-icon>
+      </div>
+      <div [@bounce]='state'>
+        <h2>Otorga tu opinión</h2>
+        <p>en los siguientes rubros</p>
+      </div> 
+    </ion-slide>
+
+    <ion-slide>
+      <div class="diag" style="background: url('assets/img/whitedg.svg') no-repeat">
+        <ion-icon ios="ios-car" md="md-car" color="primary_c" [@bounce]='state'></ion-icon> 
+      </div>
+      <div [@bounce]='state'>
+        <h2>Seguridad</h2>
+        <p></p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="diag" style="background: url('assets/img/whitedg.svg') no-repeat">
+        <ion-icon ios="ios-car" md="md-car" color="primary_c" [@bounce]='state'></ion-icon>        
+      </div>
+      <div [@bounce]='state'>
+        <h2>Vialidad</h2>
+        <p></p>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <div class="diag" style="background: url('assets/img/whitedg.svg') no-repeat">
+        <ion-icon ios="ios-business" md="md-business" color="primary_c" [@bounce]='state'></ion-icon>         
+      </div>
+      <div [@bounce]='state'>
+        <h2>Infraestructura</h2>
+        <p></p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  <button (click)="skip()" id="skip">{{ skipMsg }}</button>
+</ion-content>
